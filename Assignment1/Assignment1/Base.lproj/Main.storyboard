@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Life Grid-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcq-LR-juZ" userLabel="Blue Square">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <color key="backgroundColor" red="0.24049620430491303" green="0.41576484946203451" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mcq-LR-juZ" secondAttribute="height" multiplier="1:1" id="01g-za-89e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.8" priority="750" id="9gS-nT-tLy"/>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="width" relation="lessThanOrEqual" secondItem="tsR-hK-woN" secondAttribute="width" id="dIY-07-WWB"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Mcq-LR-juZ" secondAttribute="bottom" constant="131" id="for-UP-nrN"/>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.8" priority="750" id="hms-is-Lan"/>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="height" relation="lessThanOrEqual" secondItem="tsR-hK-woN" secondAttribute="height" id="jy5-PM-WHV"/>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="q8a-fj-h2o"/>
+                            <constraint firstItem="Mcq-LR-juZ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="uYZ-mk-WlT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="for-UP-nrN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Life Grid" image="first" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKa-nG-Omr" userLabel="Green Square">
+                                <rect key="frame" x="0.0" y="286" width="600" height="265"/>
+                                <color key="backgroundColor" red="0.27391540902946898" green="1" blue="0.12012334715640549" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MB5-Pp-KOl" userLabel="Blue Square">
+                                <rect key="frame" x="0.0" y="20" width="600" height="266"/>
+                                <color key="backgroundColor" red="0.18220999118081271" green="0.86137629180231723" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MKa-nG-Omr" firstAttribute="width" secondItem="MB5-Pp-KOl" secondAttribute="width" id="Be6-QY-jJS"/>
+                            <constraint firstItem="MKa-nG-Omr" firstAttribute="height" secondItem="MB5-Pp-KOl" secondAttribute="height" id="CJx-tQ-ToK"/>
+                            <constraint firstItem="MKa-nG-Omr" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="GVt-rX-3n9"/>
+                            <constraint firstAttribute="trailing" secondItem="MB5-Pp-KOl" secondAttribute="trailing" id="IjY-t4-PHK"/>
+                            <constraint firstItem="MB5-Pp-KOl" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="MSu-nd-Jd2"/>
+                            <constraint firstItem="MKa-nG-Omr" firstAttribute="height" secondItem="MB5-Pp-KOl" secondAttribute="height" id="NNe-sp-psc"/>
+                            <constraint firstItem="MB5-Pp-KOl" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="giq-ur-0UQ"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="MKa-nG-Omr" secondAttribute="bottom" id="goP-sf-JGG"/>
+                            <constraint firstAttribute="trailing" secondItem="MKa-nG-Omr" secondAttribute="trailing" id="qmh-Fx-0eT"/>
+                            <constraint firstItem="MKa-nG-Omr" firstAttribute="top" secondItem="MB5-Pp-KOl" secondAttribute="bottom" id="yhW-Ip-KBl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Be6-QY-jJS"/>
+                                <exclude reference="NNe-sp-psc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="MKa-nG-Omr"/>
+                                <include reference="MB5-Pp-KOl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Be6-QY-jJS"/>
+                                <include reference="NNe-sp-psc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
