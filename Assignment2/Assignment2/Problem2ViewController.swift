@@ -10,9 +10,15 @@ import UIKit
 
 class Problem2ViewController: UIViewController {
 
+    @IBOutlet weak var textBox: UITextView!
+    var before:[[Bool]] = [[Bool]](count:4, repeatedValue:[Bool](count:4, repeatedValue:false))
+    var count = Int()
+    var after:[[Bool]] = [[Bool]](count:4, repeatedValue:[Bool](count:4, repeatedValue:false))
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Problem 2"
+        self.navigationItem.title = "Problem 2"
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +27,18 @@ class Problem2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonPressed(sender: UIButton){
+        count = 0
+        for (index, element) in before.enumerate() {
+            for (index1, var element1) in element.enumerate(){
+                if arc4random_uniform(3)==1 && element1 == false{
+                    count += 1
+                    element1 = true
+                    after[index][index1] = true
+            }
+        }
+        }
+        
+        textBox.text = textBox.text.stringByAppendingString("Alive Before: " + String(count) + " ")
     }
-    */
-
 }

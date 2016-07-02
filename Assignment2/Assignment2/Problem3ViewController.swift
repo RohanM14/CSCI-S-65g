@@ -10,9 +10,11 @@ import UIKit
 
 class Problem3ViewController: UIViewController {
 
+    @IBOutlet weak var textBox: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Problem 3"
+        self.navigationItem.title = "Problem 3"
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +23,9 @@ class Problem3ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func buttonPressed(sender: UIButton) {
+        textBox.text = textBox.text.stringByAppendingString("The button was pressed.")
+    }
 
     /*
     // MARK: - Navigation
