@@ -15,6 +15,7 @@
 		045B4F691D2490AB005D6700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B4F671D2490AB005D6700 /* Main.storyboard */; };
 		045B4F6B1D2490AB005D6700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045B4F6A1D2490AB005D6700 /* Assets.xcassets */; };
 		045B4F6E1D2490AB005D6700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045B4F6C1D2490AB005D6700 /* LaunchScreen.storyboard */; };
+		04634C641D2946F400F41773 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04634C631D2946F400F41773 /* Engine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		045B4F6A1D2490AB005D6700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045B4F6D1D2490AB005D6700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045B4F6F1D2490AB005D6700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04634C631D2946F400F41773 /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0452A4731D25530C00040D80 /* Problem2ViewController.swift */,
 				0452A4751D25531B00040D80 /* Problem3ViewController.swift */,
 				0452A4771D25532700040D80 /* Problem4ViewController.swift */,
+				04634C631D2946F400F41773 /* Engine.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0452A4741D25530C00040D80 /* Problem2ViewController.swift in Sources */,
+				04634C641D2946F400F41773 /* Engine.swift in Sources */,
 				045B4F661D2490AB005D6700 /* MainController.swift in Sources */,
 				0452A4781D25532700040D80 /* Problem4ViewController.swift in Sources */,
 				0452A4761D25531B00040D80 /* Problem3ViewController.swift in Sources */,
