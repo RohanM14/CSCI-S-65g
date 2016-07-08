@@ -27,7 +27,8 @@ import UIKit
             grid = [[CellState]](count:rows, repeatedValue: [CellState](count: cols, repeatedValue: .Empty))
         }
     }
-    
+    var rowNumber = 0
+    var colNumber = 0
     
     enum CellState: String {
         case Living, Empty, Born, Died
@@ -55,7 +56,6 @@ import UIKit
         }
 
     }
-
     
     override func drawRect(rect: CGRect)
     {
@@ -86,43 +86,57 @@ import UIKit
                     emptyColor.setFill()
                     cell.fill()
                 }
-
+                
             }
         }
-
-
-
+        
+        
+        
         for x in 0...rows
         {
             let lineWidth: CGFloat = gridWidth
             let plusHeight: CGFloat = bounds.height
             let plusWidth: CGFloat = bounds.width
-
+            
             let plusPath = UIBezierPath()
-
+            
             plusPath.lineWidth = lineWidth
-        
+            
             plusPath.moveToPoint(CGPoint(
                 x:(bounds.width/CGFloat(rows)) * CGFloat(x),
                 y:bounds.height/2 - plusHeight/2))
-        
+            
             plusPath.addLineToPoint(CGPoint(
                 x:(bounds.width/CGFloat(rows)) * CGFloat(x),
                 y:bounds.height/2 + plusHeight/2))
-        
+            
             plusPath.moveToPoint(CGPoint(
                 x:bounds.width/2  - plusWidth/2,
                 y:(bounds.height/CGFloat(cols)) * CGFloat(x)))
-
+            
             plusPath.addLineToPoint(CGPoint(
                 x:bounds.width/2 + plusWidth/2,
                 y:(bounds.height/CGFloat(cols)) * CGFloat(x)))
-    
+            
             gridColor.setStroke()
-        
+            
             plusPath.stroke()
         }
         
-}
+    }
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let touch = touches.first {
+            let position: CGPoint = touch.locationInView(self)
+            colNumber = Int(position.x) / ((Int(bounds.width) / cols) + 1)
+            rowNumber = Int(position.y) / ((Int(bounds.height) / rows) + 1)
+            var changingCell = grid[rowNumber][colNumber]
+            let changedCell = changingCell.toggle(changingCell)
+            grid[rowNumber][colNumber] = changedCell
+            print(changingCell.rawValue)
+            [GridView.setNeedsDisplayInRect]
+        }
+    }
+    
+    
 }
