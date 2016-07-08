@@ -59,25 +59,40 @@ import UIKit
     
     override func drawRect(rect: CGRect)
     {
-        
-        let width = bounds.width/CGFloat(rows + 1)
-        let height = bounds.height/CGFloat(cols + 1)
-        for r in 0...rows{
-            for c in 0...cols{
+        let width = bounds.width/CGFloat(rows)
+        let height = bounds.height/CGFloat(cols)
+        for (r, element) in grid.enumerate(){
+            for (c, element1) in element.enumerate(){
                 let cellRect: CGRect = CGRect(
                     x: (width * CGFloat(r)),
                     y: (height * CGFloat(c)),
                     width: width,
                     height: height)
+                switch element1{
+                case .Living:
+                    let cell = UIBezierPath(ovalInRect: cellRect)
+                    livingColor.setFill()
+                    cell.fill()
+                case .Died:
+                    let cell = UIBezierPath(ovalInRect: cellRect)
+                    diedColor.setFill()
+                    cell.fill()
+                case .Born:
+                    let cell = UIBezierPath(ovalInRect: cellRect)
+                    bornColor.setFill()
+                    cell.fill()
+                case .Empty:
                     let cell = UIBezierPath(ovalInRect: cellRect)
                     emptyColor.setFill()
                     cell.fill()
+                }
+
             }
         }
 
 
 
-        for x in 0...21
+        for x in 0...rows
         {
             let lineWidth: CGFloat = gridWidth
             let plusHeight: CGFloat = bounds.height
@@ -88,20 +103,20 @@ import UIKit
             plusPath.lineWidth = lineWidth
         
             plusPath.moveToPoint(CGPoint(
-                x:(bounds.width/CGFloat(rows + 1)) * CGFloat(x),
+                x:(bounds.width/CGFloat(rows)) * CGFloat(x),
                 y:bounds.height/2 - plusHeight/2))
         
             plusPath.addLineToPoint(CGPoint(
-                x:(bounds.width/CGFloat(rows + 1)) * CGFloat(x),
+                x:(bounds.width/CGFloat(rows)) * CGFloat(x),
                 y:bounds.height/2 + plusHeight/2))
         
             plusPath.moveToPoint(CGPoint(
                 x:bounds.width/2  - plusWidth/2,
-                y:(bounds.height/CGFloat(cols + 1)) * CGFloat(x)))
+                y:(bounds.height/CGFloat(cols)) * CGFloat(x)))
 
             plusPath.addLineToPoint(CGPoint(
                 x:bounds.width/2 + plusWidth/2,
-                y:(bounds.height/CGFloat(cols + 1)) * CGFloat(x)))
+                y:(bounds.height/CGFloat(cols)) * CGFloat(x)))
     
             gridColor.setStroke()
         
