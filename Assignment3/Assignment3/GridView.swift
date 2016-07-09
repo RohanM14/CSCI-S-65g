@@ -128,13 +128,19 @@ import UIKit
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             let position: CGPoint = touch.locationInView(self)
-            colNumber = Int(position.x) / ((Int(bounds.width) / cols) + 1)
-            rowNumber = Int(position.y) / ((Int(bounds.height) / rows) + 1)
+            rowNumber = Int(position.x) / ((Int(bounds.width) / cols) + 1)
+            colNumber = Int(position.y) / ((Int(bounds.height) / rows) + 1)
             var changingCell = grid[rowNumber][colNumber]
             let changedCell = changingCell.toggle(changingCell)
             grid[rowNumber][colNumber] = changedCell
-            print(changingCell.rawValue)
-            [GridView.setNeedsDisplayInRect]
+            let width = bounds.width/CGFloat(rows)
+            let height = bounds.height/CGFloat(cols)
+            let cellRect: CGRect = CGRect(
+                x: (width * CGFloat(rowNumber)),
+                y: (height * CGFloat(colNumber)),
+                width: width,
+                height: height)
+            [self.setNeedsDisplayInRect(cellRect)]
         }
     }
     
