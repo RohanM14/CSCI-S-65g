@@ -19,7 +19,23 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbg-lF-Iee" customClass="GridView" customModule="Assignment3" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-mt-7n6">
+                                        <rect key="frame" x="272" y="0.0" width="57" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <state key="normal" title="Iterate">
+                                            <color key="titleColor" red="1" green="0.17666324674954825" blue="0.24407214595189519" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Deq-mg-xvi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="w9b-mt-7n6" firstAttribute="top" secondItem="Gbg-lF-Iee" secondAttribute="top" id="3rL-q4-4o3"/>
+                                    <constraint firstItem="w9b-mt-7n6" firstAttribute="centerX" secondItem="Gbg-lF-Iee" secondAttribute="centerX" id="v9Y-iv-Isy"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rows">
                                         <integer key="value" value="20"/>
@@ -47,13 +63,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9b-mt-7n6">
-                                <rect key="frame" x="178" y="0.0" width="146" height="34"/>
-                                <state key="normal" title="Iterate"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Deq-mg-xvi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
