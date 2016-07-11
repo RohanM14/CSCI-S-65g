@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
-        gridView.iterate(gridView.grid)
-        [GridView.setNeedsDisplay]
+        gridView.grid = gridView.iterate(gridView.grid)
+        gridView.setNeedsDisplay()
     }
 }

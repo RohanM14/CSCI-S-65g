@@ -73,7 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="gridView" destination="8bC-Xf-vdC" id="swg-JD-Czc"/>
+                        <outlet property="gridView" destination="Gbg-lF-Iee" id="YM6-RZ-ADI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

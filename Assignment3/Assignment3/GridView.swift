@@ -16,7 +16,8 @@ import UIKit
     @IBInspectable var diedColor: UIColor = UIColor.brownColor()
     @IBInspectable var gridColor: UIColor = UIColor.darkGrayColor()
     @IBInspectable var gridWidth: CGFloat = 0
-    var grid: [[CellState]]!
+    var grid: [[CellState]] = [[]]
+    
     @IBInspectable var rows: Int = 20{
         didSet{
             grid = [[CellState]](count:rows, repeatedValue: [CellState](count: cols, repeatedValue: .Empty))
@@ -222,7 +223,6 @@ import UIKit
     
     func iterate(before: [[CellState]]) -> [[CellState]]{
         let after = step(before)
-        print(after)
         return after
     }
 }
