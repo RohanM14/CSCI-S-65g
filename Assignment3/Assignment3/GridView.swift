@@ -35,10 +35,10 @@ import UIKit
         
         func description() -> String{
             switch self{
-            case Living: return Living.rawValue
-            case Empty: return Empty.rawValue
-            case Born: return Born.rawValue
-            case Died: return Died.rawValue
+            case Living: return "Living"
+            case Empty: return "Empty"
+            case Born: return "Born"
+            case Died: return "Died"
             }
         }
         
@@ -140,7 +140,6 @@ import UIKit
                 y: (height * CGFloat(colNumber)),
                 width: width,
                 height: height)
-            print(iterate(grid))
             [self.setNeedsDisplayInRect(cellRect)]
         }
     }

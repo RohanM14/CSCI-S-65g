@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var gridView: GridView! = GridView()
+    @IBOutlet var gridView: GridView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
-        print(gridView.iterate(gridView.grid))
+        gridView.iterate(gridView.grid)
         [GridView.setNeedsDisplay]
-        
     }
 }
