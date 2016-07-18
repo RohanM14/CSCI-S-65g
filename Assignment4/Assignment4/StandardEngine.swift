@@ -50,8 +50,8 @@ class StandardEnigine: EngineProtocol{
             {
                 for (index1, _) in element.enumerate()
                 {
-                    if before[index][index1] == .Living || before[index][index1] == .Born
-                    {
+                    switch before[index][index1]{
+                    case .Living, .Born:
                         if counter[index][index1] == 0 || counter[index][index1] == 1
                         {
                             after[index][index1] = .Died
@@ -64,9 +64,7 @@ class StandardEnigine: EngineProtocol{
                         {
                             after[index][index1] = .Died
                         }
-                    }
-                    else
-                    {
+                    case .Died, .Empty:
                         if counter[index][index1] == 3
                         {
                             after[index][index1] = .Born
@@ -75,7 +73,6 @@ class StandardEnigine: EngineProtocol{
                         {
                             after[index][index1] = .Empty
                         }
-                    }
                 }
             }
             return after
