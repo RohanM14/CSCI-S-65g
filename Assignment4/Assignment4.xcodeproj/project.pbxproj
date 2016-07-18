@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04419E7F1D3BBDEA00644A32 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04419E7E1D3BBDEA00644A32 /* Grid.swift */; };
+		04419E811D3C756900644A32 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04419E801D3C756900644A32 /* GridView.swift */; };
 		049605491D36827400A398CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049605481D36827400A398CB /* AppDelegate.swift */; };
 		0496054B1D36827400A398CB /* InstrumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496054A1D36827400A398CB /* InstrumentationViewController.swift */; };
 		0496054D1D36827400A398CB /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496054C1D36827400A398CB /* SimulationViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04419E7E1D3BBDEA00644A32 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		04419E801D3C756900644A32 /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		049605451D36827400A398CB /* Assignment4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049605481D36827400A398CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0496054A1D36827400A398CB /* InstrumentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentationViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				049605641D36EAEA00A398CB /* EngineProtocol.swift */,
 				049605661D36EDA600A398CB /* StandardEngine.swift */,
 				049605601D36E22200A398CB /* CellState.swift */,
+				04419E7E1D3BBDEA00644A32 /* Grid.swift */,
+				04419E801D3C756900644A32 /* GridView.swift */,
 				049605511D36827400A398CB /* Assets.xcassets */,
 				049605531D36827400A398CB /* LaunchScreen.storyboard */,
 				049605561D36827400A398CB /* Info.plist */,
@@ -159,6 +165,8 @@
 				0496055F1D36DCED00A398CB /* GridProtocol.swift in Sources */,
 				049605611D36E22200A398CB /* CellState.swift in Sources */,
 				0496054D1D36827400A398CB /* SimulationViewController.swift in Sources */,
+				04419E811D3C756900644A32 /* GridView.swift in Sources */,
+				04419E7F1D3BBDEA00644A32 /* Grid.swift in Sources */,
 				0496055D1D3699A700A398CB /* StatisticsViewController.swift in Sources */,
 				049605491D36827400A398CB /* AppDelegate.swift in Sources */,
 				0496054B1D36827400A398CB /* InstrumentationViewController.swift in Sources */,
@@ -316,6 +324,7 @@
 				0496055B1D36827400A398CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

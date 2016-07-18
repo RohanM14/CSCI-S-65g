@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5eY-bw-f1W">
-                                <rect key="frame" x="245" y="190" width="126" height="221"/>
+                                <rect key="frame" x="237" y="205" width="126" height="190"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# of Rows" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-aR-0jU">
                                         <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
@@ -51,19 +51,21 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOb-Fx-EPz">
-                                        <rect key="frame" x="0.0" y="190" width="128" height="31"/>
-                                    </switch>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="126" id="mwN-dP-iQK"/>
                                 </constraints>
                             </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fef-hN-MRr">
+                                <rect key="frame" x="276" y="400" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5eY-bw-f1W" firstAttribute="centerX" secondItem="gLm-ny-gFK" secondAttribute="centerX" constant="8" id="6ol-pZ-sw1"/>
+                            <constraint firstItem="5eY-bw-f1W" firstAttribute="centerX" secondItem="gLm-ny-gFK" secondAttribute="centerX" id="6ol-pZ-sw1"/>
+                            <constraint firstItem="Fef-hN-MRr" firstAttribute="centerX" secondItem="gLm-ny-gFK" secondAttribute="centerX" id="D9y-P5-f0M"/>
                             <constraint firstItem="5eY-bw-f1W" firstAttribute="centerY" secondItem="gLm-ny-gFK" secondAttribute="centerY" id="f4v-cx-TjA"/>
+                            <constraint firstItem="Fef-hN-MRr" firstAttribute="top" secondItem="5eY-bw-f1W" secondAttribute="bottom" constant="5" id="tdd-iX-QoV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Instrumentation" image="first" id="acW-dT-cKf"/>
@@ -75,7 +77,6 @@
         <!--Simulation-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController id="8rJ-Kc-sve" customClass="SimulationViewController" customModule="Assignment4" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MMp-LY-A1k"/>
@@ -88,6 +89,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Simulation" image="first" id="cPa-gy-q4n"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
