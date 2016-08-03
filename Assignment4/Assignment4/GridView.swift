@@ -8,8 +8,7 @@
 
 import UIKit
 
-class GridView: UIView {
-    @IBDesignable class GridView: UIView {
+@IBDesignable class GridView: UIView {
         
         @IBInspectable var livingColor: UIColor = UIColor.yellowColor()
         @IBInspectable var emptyColor: UIColor = UIColor.grayColor()
@@ -145,6 +144,4 @@ class GridView: UIView {
                 [self.setNeedsDisplayInRect(cellRect)]
             }
         }
-        
-    }
 }

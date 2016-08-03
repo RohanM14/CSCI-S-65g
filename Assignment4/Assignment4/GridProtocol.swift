@@ -13,6 +13,7 @@ protocol GridProtocol {
     
     var rows: UInt { get }
     var cols: UInt { get }
+    var grid: [[CellState]] { get set }
     
     func neighbors(coordinates: (r: Int, c: Int)) -> [(Int, Int)]
     

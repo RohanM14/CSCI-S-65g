@@ -8,36 +8,37 @@
 
 import Foundation
 
-class StandardEnigine: EngineProtocol{
+
+class StandardEngine: EngineProtocol{
 
     var delegate: EngineDelegate?
     var grid: GridProtocol = Grid(rows: 0, cols: 0)
     var refreshRate: Double = 0
     var refreshTimer: NSTimer?
-    var rows: UInt = 10{
+    var rows: Int = 10{
         didSet{
-            grid = Grid(rows: rows, cols: cols)
+            grid = Grid(rows: UInt(rows), cols: UInt(cols))
         }
     }
-    var cols: UInt = 10{
+    var cols: Int = 10{
         didSet{
-            grid = Grid(rows: rows, cols: cols)
+            grid = Grid(rows: UInt(rows), cols: UInt(cols))
         }
     }
     required init (rows: Int, cols: Int){
-        self.rows = UInt(rows)
-        self.cols = UInt(cols)
+        self.rows = rows
+        self.cols = cols
     }
     
     func step() -> GridProtocol{
         var after: [[CellState]]  = [[CellState]](count:Int(rows), repeatedValue: [CellState](count: Int(cols), repeatedValue: .Empty))
-            var counter: [[Int]] = [[Int]](count: grid.count, repeatedValue: [Int](count: grid[0].count, repeatedValue: 0))
+            var counter: [[Int]] = [[Int]](count: Int(rows), repeatedValue: [Int](count: Int(cols), repeatedValue: 0))
             var count: Int = 0
-            for (index, element) in before.enumerate(){
+            for (index, element) in after.enumerate(){
                 for (index1, _) in element.enumerate(){
                     count = 0
-                    for value in neighbors(before, coordinates: (index, index1)){
-                        if before[value.0][value.1] == .Living || before[value.0][value.1] == .Born {
+                    for value in grid.neighbors((index, index1)){
+                        if grid[UInt(value.0), UInt(value.1)] == .Living || grid[UInt(value.0), UInt(value.1)] == .Born {
                             count += 1
                         }
                     }
@@ -46,11 +47,11 @@ class StandardEnigine: EngineProtocol{
             }
             
             
-            for (index, element) in before.enumerate()
+            for (index, element) in grid.grid.enumerate()
             {
                 for (index1, _) in element.enumerate()
                 {
-                    switch before[index][index1]{
+                    switch grid[index, index1]{
                     case .Living, .Born:
                         if counter[index][index1] == 0 || counter[index][index1] == 1
                         {
@@ -76,6 +77,6 @@ class StandardEnigine: EngineProtocol{
                 }
             }
             return after
-            
+        }
         }
 }

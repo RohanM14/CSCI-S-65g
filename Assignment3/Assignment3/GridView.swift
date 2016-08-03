@@ -220,9 +220,4 @@ import UIKit
         return after
         
     }
-    
-    func iterate(before: [[CellState]]) -> [[CellState]]{
-        let after = step(before)
-        return after
-    }
 }

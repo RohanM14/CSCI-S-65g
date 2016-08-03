@@ -1,17 +1,15 @@
 //
-//  ViewController.swift
-//  Assignment3
+//  SecondViewController.swift
+//  FinalProject
 //
-//  Created by Rohan Muthukumar on 7/6/16.
+//  Created by Rohan Muthukumar on 7/28/16.
 //  Copyright © 2016 Rohan Muthukumar. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
-    @IBOutlet var gridView: GridView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,9 +19,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func buttonPressed(sender: UIButton) {
-        gridView.grid = gridView.step(gridView.grid)
-        gridView.setNeedsDisplay()
-    }
+
+
 }
+
